@@ -6,14 +6,6 @@ start=time.time()
 EMAIl_ADDRESS = os.environ.get('EMAIL_USER')
 EMAIl_PASSWORD = os.environ.get('EMAIL_PASS')
 
-"""contacts = ['dhoin9@op.pl', 'dhoin9@live.com']
-msg = EmailMessage()
-msg['Subject'] = "Melanż"
-msg['From'] = EMAIl_ADDRESS
-msg['To'] = Lud.man
-msg.set_content('Witaj mordo!!\n\nCo powiesz na małe chlanie?\n\nWsyłane z systemu Linux')
-"""
-
 class Lud:
     def __init__(self, man, file1, file2, file3):
         self.man = man
@@ -31,10 +23,10 @@ with open('list.csv', 'r') as fi:
 
 for person in record_list:
     msg = EmailMessage()
-    msg['Subject'] = "Melanż"
+    msg['Subject'] = "SPAM"
     msg['From'] = EMAIl_ADDRESS
     msg['To'] = person.man
-    msg.set_content('Witaj mordo!!\n\nCo powiesz na małe chlanie?\n\nWsyłane z systemu Linux')
+    msg.set_content('Cześć\n\nZostałeś zaspamowany\n\nWsyłane z systemu Linux')
     print(msg['To'])
     files = [person.file1, person.file2, person.file3]
     print(files)
