@@ -31,7 +31,7 @@ for person in record_list:
     files = [person.file1, person.file2, person.file3]
     print(files)
     for file in files:
-        #załaczanie plików
+        #attaching files
         try:
             with open(file,'rb') as f:
              print(file)
@@ -46,4 +46,3 @@ for person in record_list:
        smtp.send_message(msg)
 stop=time.time()
 print(stop-start)
-print(time.process_time())
