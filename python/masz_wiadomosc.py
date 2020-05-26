@@ -44,5 +44,6 @@ for person in record_list:
     with smtplib.SMTP_SSL('smtp.gmail.com', 465) as smtp:
        smtp.login(EMAIl_ADDRESS, EMAIl_PASSWORD)
        smtp.send_message(msg)
+#information about time elapse
 stop=time.time()
 print(stop-start)
